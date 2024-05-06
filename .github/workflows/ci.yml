@@ -12,9 +12,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4 # Atualizado para v4
-      - name: Use Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4 # Atualizado para v4
         with:
           node-version: "16" # Especifique a versão desejada do Node.js, por exemplo, "16"
-      - run: npm install
-      - run: npm test
+
+      - name: Navigate to project directory
+        run: cd escola-rogerio # Substitua "escola-rogerio" pelo diretório onde está o seu projeto
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
