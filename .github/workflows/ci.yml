@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4 # Atualizado para v4
       - name: Use Node.js
-        uses: actions/setup-node@v2 # Atualizado para v2
+        uses: actions/setup-node@v4 # Atualizado para v4
         with:
-          node-version: "14" # Especifique a versão desejada do Node.js, por exemplo, "14"
+          node-version: "16" # Especifique a versão desejada do Node.js, por exemplo, "16"
       - run: npm install
       - run: npm test
